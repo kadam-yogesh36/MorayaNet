@@ -1,0 +1,1393 @@
+<!DOCTYPE html>
+<html lang="mr" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>मोरया मल्टीसर्व्हिसेस | CSC व शासकीय डिजिटल सेवा केंद्र | मुखेड (नांदेड)</title>
+    <meta name="description" content="मोरया मल्टीसर्व्हिसेस, सुभेदार कॉम्प्लेक्स, मुखेड - उत्पन्न प्रमाणपत्र, जात प्रमाणपत्र, PAN कार्ड, मतदार ओळखपत्र, EWS, राजपत्र, झेरॉक्स व सर्व डिजिटल सेवा.">
+    
+    <!-- Google Fonts for Devanagari Typography -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Devanagari:wght@300;400;500;600;700;800&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Lucide Icons CDN -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        saffron: {
+                            50: '#fff7ed',
+                            100: '#ffedd5',
+                            500: '#f97316',
+                            600: '#ea580c',
+                            700: '#c2410c',
+                            800: '#9a3412',
+                            900: '#7c2d12',
+                        },
+                        maroon: {
+                            800: '#581c87',
+                            900: '#3b0764',
+                        },
+                        gold: {
+                            400: '#fbbf24',
+                            500: '#f59e0b',
+                            600: '#d97706',
+                        }
+                    },
+                    fontFamily: {
+                        devanagari: ['"Noto Sans Devanagari"', 'sans-serif'],
+                        poppins: ['Poppins', 'sans-serif'],
+                    },
+                    animation: {
+                        'fade-in': 'fadeIn 0.3s ease-out forwards',
+                        'slide-up': 'slideUp 0.4s ease-out forwards',
+                        'pulse-slow': 'pulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+                        'ken-burns': 'kenBurns 20s infinite alternate',
+                    },
+                    keyframes: {
+                        fadeIn: {
+                            '0%': { opacity: '0' },
+                            '100%': { opacity: '1' },
+                        },
+                        slideUp: {
+                            '0%': { opacity: '0', transform: 'translateY(15px)' },
+                            '100%': { opacity: '1', transform: 'translateY(0)' },
+                        },
+                        kenBurns: {
+                            '0%': { transform: 'scale(1)' },
+                            '100%': { transform: 'scale(1.15)' }
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        body {
+            font-family: 'Noto Sans Devanagari', sans-serif;
+            background-color: #f8fafc;
+            color: #1e293b;
+        }
+
+        .glass-card {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(226, 232, 240, 0.8);
+        }
+
+        .glass-dark {
+            background: rgba(15, 23, 42, 0.85);
+            backdrop-filter: blur(12px);
+        }
+
+        .hero-overlay {
+            background: linear-gradient(135deg, rgba(124, 45, 18, 0.92) 0%, rgba(15, 23, 42, 0.88) 60%, rgba(194, 65, 12, 0.8) 100%);
+        }
+
+        .view-page {
+            display: none;
+            opacity: 0;
+            transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+        }
+
+        .view-page.active {
+            display: block;
+            opacity: 1;
+            animation: fadeIn 0.4s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+        }
+
+        /* Custom Scrollbar */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #f1f5f9;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #ea580c;
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #c2410c;
+        }
+    </style>
+</head>
+<body class="min-h-screen flex flex-col pb-20 md:pb-0 font-devanagari">
+
+    <div class="bg-saffron-700 text-white text-xs md:text-sm py-2 px-4 shadow-inner">
+        <div class="max-w-7xl mx-auto flex justify-between items-center">
+            <div class="flex items-center space-x-2">
+                <span class="bg-gold-500 text-saffron-900 font-bold px-2 py-0.5 rounded text-xs flex items-center gap-1">
+                    <i data-lucide="sparkles" class="w-3 h-3"></i> माहिती
+                </span>
+                <span class="truncate">महाराष्ट्र शासनाच्या सर्व ऑनलाइन सेवा आणि CSC सुविधा आता एकाच ठिकाणी उपलब्ध!</span>
+            </div>
+            <div class="hidden md:flex items-center space-x-6 text-xs font-medium">
+                <span class="flex items-center gap-1"><i data-lucide="clock" class="w-3.5 h-3.5 text-gold-400"></i> वेळ: स. ९:०० ते सायं. ८:००</span>
+                <span class="flex items-center gap-1"><i data-lucide="map-pin" class="w-3.5 h-3.5 text-gold-400"></i> सुभेदार कॉम्प्लेक्स, मुखेड</span>
+            </div>
+        </div>
+    </div>
+
+    <header class="sticky top-0 z-40 bg-white/95 backdrop-blur-md shadow-sm border-b border-slate-100">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <!-- Branding / Logo -->
+                <a href="#" onclick="navigateTo('home'); return false;" class="flex items-center gap-3 group">
+                    <div class="w-12 h-12 rounded-xl bg-gradient-to-tr from-saffron-600 to-gold-500 p-0.5 shadow-md group-hover:shadow-saffron-500/20 transition duration-300">
+                        <div class="w-full h-full bg-white rounded-[10px] flex items-center justify-center p-1">
+                            <!-- Lord Ganesha Silhouette SVG Motif -->
+                            <svg class="w-8 h-8 text-saffron-600" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M12,2A3,3 0 0,0 9,5C9,6.27 9.8,7.35 10.92,7.76C10.35,8.22 9.69,8.79 9,9.5C8,8.5 6.5,8 5,8A4,4 0 0,0 1,12A4,4 0 0,0 5,16C6.5,16 8,15.5 9,14.5C9.75,15.3 10.5,16 11.5,16.5C10.5,17.5 9,18 7,18H6V20H7C10,20 12,19 13.5,17.5C14.5,18.5 16,19 18,19A3,3 0 0,0 21,16A3,3 0 0,0 18,13C16.8,13 15.7,13.5 15,14.2C14.2,13.5 13.5,12.5 13,11.5C14.2,11 15,10 15,8.7A3.3,3.3 0 0,0 11.7,5.4C11.9,5.2 12,4.9 12,4.5A1.5,1.5 0 0,0 10.5,3A1.5,1.5 0 0,0 9,4.5A1.5,1.5 0 0,0 10.5,6C10.8,6 11,5.9 11.2,5.8C11.7,6 12,6.5 12,7C10.9,7 10,6.1 10,5A2,2 0 0,1 12,3A2,2 0 0,1 14,5H12Z"/>
+                            </svg>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="flex items-center gap-1.5">
+                            <span class="text-xl md:text-2xl font-black tracking-tight text-slate-900 font-devanagari">मोरया</span>
+                            <span class="text-xl md:text-2xl font-black text-saffron-600 font-devanagari">मल्टीसर्व्हिसेस</span>
+                        </div>
+                        <p class="text-xs font-semibold text-slate-500 tracking-wide flex items-center gap-1">
+                            <span class="inline-block w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
+                            CSC व डिजिटल सेवा केंद्र • मुखेड
+                        </p>
+                    </div>
+                </a>
+
+                <!-- Desktop Navigation Links -->
+                <nav class="hidden lg:flex items-center gap-1">
+                    <button onclick="navigateTo('home')" class="nav-btn font-semibold px-4 py-2 rounded-lg text-slate-700 hover:text-saffron-600 hover:bg-saffron-50 transition" data-target="home">मुख्यपृष्ठ</button>
+                    <button onclick="navigateTo('services')" class="nav-btn font-semibold px-4 py-2 rounded-lg text-slate-700 hover:text-saffron-600 hover:bg-saffron-50 transition" data-target="services">आमच्या सेवा</button>
+                    <button onclick="navigateTo('documents')" class="nav-btn font-semibold px-4 py-2 rounded-lg text-slate-700 hover:text-saffron-600 hover:bg-saffron-50 transition" data-target="documents">आवश्यक कागदपत्रे</button>
+                    <button onclick="navigateTo('about')" class="nav-btn font-semibold px-4 py-2 rounded-lg text-slate-700 hover:text-saffron-600 hover:bg-saffron-50 transition" data-target="about">आमच्याबद्दल</button>
+                    <button onclick="navigateTo('faq')" class="nav-btn font-semibold px-4 py-2 rounded-lg text-slate-700 hover:text-saffron-600 hover:bg-saffron-50 transition" data-target="faq">प्रश्नोत्तरे</button>
+                    <button onclick="navigateTo('contact')" class="nav-btn font-semibold px-4 py-2 rounded-lg text-slate-700 hover:text-saffron-600 hover:bg-saffron-50 transition" data-target="contact">संपर्क</button>
+                </nav>
+
+                <!-- Action CTAs -->
+                <div class="hidden sm:flex items-center gap-2">
+                    <a id="header-phone-btn" href="#" class="flex items-center gap-1.5 px-3.5 py-2 rounded-lg bg-slate-100 text-slate-800 hover:bg-slate-200 font-medium text-sm transition">
+                        <i data-lucide="phone" class="w-4 h-4 text-saffron-600"></i>
+                        <span>कॉल करा</span>
+                    </a>
+                    <a id="header-wa-btn" href="#" target="_blank" class="flex items-center gap-1.5 px-4 py-2 rounded-lg bg-emerald-600 hover:bg-emerald-700 text-white font-medium text-sm shadow-sm transition">
+                        <i data-lucide="message-circle" class="w-4 h-4"></i>
+                        <span>WhatsApp</span>
+                    </a>
+                </div>
+
+                <!-- Mobile Hamburger Toggle -->
+                <div class="flex lg:hidden items-center">
+                    <button id="mobile-menu-toggle" onclick="toggleMobileMenu()" class="p-2.5 rounded-xl bg-slate-100 text-slate-700 hover:bg-slate-200 focus:outline-none" aria-label="Toggle Navigation">
+                        <i data-lucide="menu" class="w-6 h-6"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Navigation Drawer Overlay -->
+        <div id="mobile-menu" class="hidden lg:hidden bg-white border-b border-slate-200 px-4 pt-2 pb-6 space-y-2 shadow-lg animate-fade-in">
+            <button onclick="navigateTo('home'); toggleMobileMenu()" class="w-full text-right flex items-center justify-between px-4 py-3 rounded-lg hover:bg-saffron-50 text-slate-800 font-semibold">
+                <span>मुख्यपृष्ठ</span> <i data-lucide="chevron-left" class="w-4 h-4 text-saffron-600"></i>
+            </button>
+            <button onclick="navigateTo('services'); toggleMobileMenu()" class="w-full text-right flex items-center justify-between px-4 py-3 rounded-lg hover:bg-saffron-50 text-slate-800 font-semibold">
+                <span>आमच्या सेवा</span> <i data-lucide="chevron-left" class="w-4 h-4 text-saffron-600"></i>
+            </button>
+            <button onclick="navigateTo('documents'); toggleMobileMenu()" class="w-full text-right flex items-center justify-between px-4 py-3 rounded-lg hover:bg-saffron-50 text-slate-800 font-semibold">
+                <span>आवश्यक कागदपत्रे</span> <i data-lucide="chevron-left" class="w-4 h-4 text-saffron-600"></i>
+            </button>
+            <button onclick="navigateTo('about'); toggleMobileMenu()" class="w-full text-right flex items-center justify-between px-4 py-3 rounded-lg hover:bg-saffron-50 text-slate-800 font-semibold">
+                <span>आमच्याबद्दल</span> <i data-lucide="chevron-left" class="w-4 h-4 text-saffron-600"></i>
+            </button>
+            <button onclick="navigateTo('faq'); toggleMobileMenu()" class="w-full text-right flex items-center justify-between px-4 py-3 rounded-lg hover:bg-saffron-50 text-slate-800 font-semibold">
+                <span>प्रश्नोत्तरे (FAQ)</span> <i data-lucide="chevron-left" class="w-4 h-4 text-saffron-600"></i>
+            </button>
+            <button onclick="navigateTo('contact'); toggleMobileMenu()" class="w-full text-right flex items-center justify-between px-4 py-3 rounded-lg hover:bg-saffron-50 text-slate-800 font-semibold">
+                <span>संपर्क करा</span> <i data-lucide="chevron-left" class="w-4 h-4 text-saffron-600"></i>
+            </button>
+            
+            <div class="pt-4 border-t border-slate-100 grid grid-cols-2 gap-2">
+                <a id="drawer-phone-btn" href="#" class="flex items-center justify-center gap-2 py-3 rounded-lg bg-saffron-50 text-saffron-700 font-bold text-sm">
+                    <i data-lucide="phone" class="w-4 h-4"></i> कॉल करा
+                </a>
+                <a id="drawer-wa-btn" href="#" target="_blank" class="flex items-center justify-center gap-2 py-3 rounded-lg bg-emerald-600 text-white font-bold text-sm">
+                    <i data-lucide="message-circle" class="w-4 h-4"></i> WhatsApp
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <main class="flex-grow">
+
+        <!-- ================= PAGE 1: HOME PAGE ================= -->
+        <div id="view-home" class="view-page active">
+            
+            <!-- Dynamic Hero Section with Background Slideshow -->
+            <section class="relative min-h-[580px] lg:min-h-[640px] flex items-center justify-center overflow-hidden text-white">
+                <!-- Dynamic Background Slideshow Images -->
+                <div id="hero-slideshow-container" class="absolute inset-0 w-full h-full">
+                    <div class="slide absolute inset-0 bg-cover bg-center transition-opacity duration-1000 opacity-100 scale-105 animate-ken-burns" style="background-image: url('https://images.unsplash.com/photo-1532375810709-75b1da00537c?q=80&w=1600&auto=format&fit=crop');"></div>
+                    <div class="slide absolute inset-0 bg-cover bg-center transition-opacity duration-1000 opacity-0 scale-105 animate-ken-burns" style="background-image: url('https://images.unsplash.com/photo-1582510003544-4d00b7f74220?q=80&w=1600&auto=format&fit=crop');"></div>
+                    <div class="slide absolute inset-0 bg-cover bg-center transition-opacity duration-1000 opacity-0 scale-105 animate-ken-burns" style="background-image: url('https://images.unsplash.com/photo-1609137149736-2312ba7774fe?q=80&w=1600&auto=format&fit=crop');"></div>
+                </div>
+
+                <!-- Rich Gradient Overlay with Ganapati Motif Watermark -->
+                <div class="absolute inset-0 hero-overlay z-10 flex items-center justify-center pointer-events-none">
+                    <svg class="w-[500px] h-[500px] text-white/5 absolute -right-20 -bottom-20 rotate-12" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M12,2A3,3 0 0,0 9,5C9,6.27 9.8,7.35 10.92,7.76C10.35,8.22 9.69,8.79 9,9.5C8,8.5 6.5,8 5,8A4,4 0 0,0 1,12A4,4 0 0,0 5,16C6.5,16 8,15.5 9,14.5C9.75,15.3 10.5,16 11.5,16.5C10.5,17.5 9,18 7,18H6V20H7C10,20 12,19 13.5,17.5C14.5,18.5 16,19 18,19A3,3 0 0,0 21,16A3,3 0 0,0 18,13C16.8,13 15.7,13.5 15,14.2C14.2,13.5 13.5,12.5 13,11.5C14.2,11 15,10 15,8.7A3.3,3.3 0 0,0 11.7,5.4C11.9,5.2 12,4.9 12,4.5A1.5,1.5 0 0,0 10.5,3A1.5,1.5 0 0,0 9,4.5A1.5,1.5 0 0,0 10.5,6C10.8,6 11,5.9 11.2,5.8C11.7,6 12,6.5 12,7C10.9,7 10,6.1 10,5A2,2 0 0,1 12,3A2,2 0 0,1 14,5H12Z"/>
+                    </svg>
+                </div>
+
+                <!-- Hero Main Content -->
+                <div class="relative z-20 max-w-5xl mx-auto px-4 py-16 text-center space-y-6">
+                    <!-- Premium Traditional Tag Accent for Naik Yanche -->
+                    <div class="inline-flex items-center justify-center relative my-2">
+                        <!-- Decorative Left Wing Accent -->
+                        <span class="w-8 h-[2px] bg-gradient-to-r from-transparent to-gold-400 hidden sm:inline-block"></span>
+                        
+                        <!-- Main Styled Badge -->
+                        <div class="mx-3 px-5 py-1.5 rounded-full bg-gradient-to-r from-saffron-900/90 via-maroon-800/90 to-saffron-900/90 border border-gold-500/60 shadow-lg shadow-saffron-950/40 text-gold-400 backdrop-blur-md text-sm sm:text-base font-extrabold tracking-wider flex items-center gap-2">
+                            <span class="text-gold-500 text-xs">✦</span>
+                            <span class="font-devanagari tracking-wide text-white drop-shadow-[0_1px_2px_rgba(0,0,0,0.8)]">नाईक यांचे</span>
+                            <span class="text-gold-500 text-xs">✦</span>
+                        </div>
+
+                        <!-- Decorative Right Wing Accent -->
+                        <span class="w-8 h-[2px] bg-gradient-to-l from-transparent to-gold-400 hidden sm:inline-block"></span>
+                    </div>
+
+                    <!-- Main Titles -->
+                    <h1 class="text-4xl sm:text-6xl lg:text-7xl font-black tracking-tight text-white leading-tight drop-shadow-md">
+                        मोरया मल्टीसर्व्हिसेस
+                    </h1>
+                    <p class="text-lg sm:text-2xl font-bold text-gold-400 max-w-3xl mx-auto leading-relaxed drop-shadow">
+                        महाराष्ट्र शासनाच्या विविध शासकीय कागदपत्रे व सर्व डिजिटल सेवा एकाच ठिकाणी
+                    </p>
+
+                    <!-- Subtitle / Description -->
+                    <p class="text-sm sm:text-base text-slate-200 max-w-2xl mx-auto leading-relaxed">
+                        उत्पन्न प्रमाणपत्र, जात प्रमाणपत्र, जात वैधता, राष्ट्रीयत्व, वय व अधिवास, मतदार ओळखपत्र, PAN कार्ड, EWS, राजपत्र, निवडणूक कामे, झेरॉक्स व सर्व डिजिटल ऑनलाइन अर्जांसाठी संपर्क करा.
+                    </p>
+
+                    <!-- Action Buttons CTAs -->
+                    <div class="pt-4 flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-4">
+                        <a id="hero-wa-btn" href="#" target="_blank" class="w-full sm:w-auto px-6 py-3.5 rounded-xl bg-emerald-600 hover:bg-emerald-500 text-white font-bold text-base shadow-lg shadow-emerald-900/30 flex items-center justify-center gap-2 transition hover:-translate-y-0.5">
+                            <i data-lucide="message-circle" class="w-5 h-5"></i>
+                            <span>WhatsApp वर संपर्क करा</span>
+                        </a>
+                        <a id="hero-call-btn" href="#" class="w-full sm:w-auto px-6 py-3.5 rounded-xl bg-saffron-600 hover:bg-saffron-500 text-white font-bold text-base shadow-lg shadow-saffron-900/30 flex items-center justify-center gap-2 transition hover:-translate-y-0.5">
+                            <i data-lucide="phone-call" class="w-5 h-5"></i>
+                            <span>आत्ताच कॉल करा</span>
+                        </a>
+                        <a id="hero-maps-btn" href="#" target="_blank" class="w-full sm:w-auto px-6 py-3.5 rounded-xl bg-white/10 hover:bg-white/20 text-white border border-white/20 backdrop-blur-md font-bold text-base flex items-center justify-center gap-2 transition">
+                            <i data-lucide="map-pin" class="w-5 h-5 text-gold-400"></i>
+                            <span>मार्ग पहा</span>
+                        </a>
+                    </div>
+                </div>
+            </section>
+
+            <section class="max-w-7xl mx-auto px-4 -mt-10 relative z-30">
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-3 sm:gap-4">
+                    <div class="glass-card p-4 rounded-2xl shadow-lg border border-slate-100 flex items-center gap-3">
+                        <div class="w-10 h-10 sm:w-12 sm:h-12 rounded-xl bg-saffron-100 text-saffron-700 flex items-center justify-center shrink-0">
+                            <i data-lucide="landmark" class="w-5 h-5 sm:w-6 sm:h-6"></i>
+                        </div>
+                        <div>
+                            <h3 class="font-bold text-slate-800 text-sm sm:text-base">शासकीय सेवा</h3>
+                            <p class="text-xs text-slate-500 hidden sm:block">विविध दाखले व प्रमाणपत्रांचे अर्ज</p>
+                        </div>
+                    </div>
+
+                    <div class="glass-card p-4 rounded-2xl shadow-lg border border-slate-100 flex items-center gap-3">
+                        <div class="w-10 h-10 sm:w-12 sm:h-12 rounded-xl bg-blue-100 text-blue-700 flex items-center justify-center shrink-0">
+                            <i data-lucide="laptop" class="w-5 h-5 sm:w-6 sm:h-6"></i>
+                        </div>
+                        <div>
+                            <h3 class="font-bold text-slate-800 text-sm sm:text-base">ऑनलाइन सेवा</h3>
+                            <p class="text-xs text-slate-500 hidden sm:block">CSC व सर्व महा-ई-सेवा कामे</p>
+                        </div>
+                    </div>
+
+                    <div class="glass-card p-4 rounded-2xl shadow-lg border border-slate-100 flex items-center gap-3">
+                        <div class="w-10 h-10 sm:w-12 sm:h-12 rounded-xl bg-emerald-100 text-emerald-700 flex items-center justify-center shrink-0">
+                            <i data-lucide="file-check" class="w-5 h-5 sm:w-6 sm:h-6"></i>
+                        </div>
+                        <div>
+                            <h3 class="font-bold text-slate-800 text-sm sm:text-base">कागदपत्र मार्गदर्शन</h3>
+                            <p class="text-xs text-slate-500 hidden sm:block">अचूक फॉर्म व यादी सहाय्य</p>
+                        </div>
+                    </div>
+
+                    <div class="glass-card p-4 rounded-2xl shadow-lg border border-slate-100 flex items-center gap-3">
+                        <div class="w-10 h-10 sm:w-12 sm:h-12 rounded-xl bg-purple-100 text-purple-700 flex items-center justify-center shrink-0">
+                            <i data-lucide="printer" class="w-5 h-5 sm:w-6 sm:h-6"></i>
+                        </div>
+                        <div>
+                            <h3 class="font-bold text-slate-800 text-sm sm:text-base">झेरॉक्स व प्रिंट</h3>
+                            <p class="text-xs text-slate-500 hidden sm:block">हाय-स्पीड प्रिंटिंग व स्कॅनिंग</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Quick Search Bar Preview on Home Page -->
+            <section class="max-w-7xl mx-auto px-4 py-12">
+                <div class="bg-gradient-to-r from-saffron-700 to-saffron-900 rounded-3xl p-6 md:p-10 text-white shadow-xl relative overflow-hidden">
+                    <div class="relative z-10 max-w-3xl mx-auto text-center space-y-4">
+                        <h2 class="text-2xl md:text-3xl font-extrabold">आपल्याला आवश्यक सेवा शोधा</h2>
+                        <p class="text-saffron-100 text-sm md:text-base">उत्पन्न, जात प्रमाणपत्र, PAN, मतदार ओळखपत्र, किंवा इतर सेवांचे नाव टाईप करा.</p>
+                        
+                        <div class="relative mt-4">
+                            <i data-lucide="search" class="w-5 h-5 text-slate-400 absolute left-4 top-1/2 -translate-y-1/2"></i>
+                            <input type="text" id="home-search-input" oninput="handleHomeSearch(this.value)" placeholder="आपल्याला कोणती सेवा हवी आहे? (उदा. उत्पन्न, जात, PAN)" class="w-full pl-12 pr-4 py-3.5 rounded-2xl text-slate-900 focus:outline-none focus:ring-4 focus:ring-gold-400/50 text-base shadow-lg">
+                        </div>
+
+                        <div class="flex flex-wrap items-center justify-center gap-2 pt-2 text-xs">
+                            <span class="text-saffron-200">लोकप्रिय शोध:</span>
+                            <button onclick="quickFilterSearch('उत्पन्न')" class="px-2.5 py-1 rounded-full bg-white/10 hover:bg-white/20 transition">उत्पन्न प्रमाणपत्र</button>
+                            <button onclick="quickFilterSearch('जात')" class="px-2.5 py-1 rounded-full bg-white/10 hover:bg-white/20 transition">जात प्रमाणपत्र</button>
+                            <button onclick="quickFilterSearch('PAN')" class="px-2.5 py-1 rounded-full bg-white/10 hover:bg-white/20 transition">PAN कार्ड</button>
+                            <button onclick="quickFilterSearch('मतदार')" class="px-2.5 py-1 rounded-full bg-white/10 hover:bg-white/20 transition">मतदार कार्ड</button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Featured Categories Highlights -->
+            <section class="max-w-7xl mx-auto px-4 py-8 space-y-8">
+                <div class="text-center space-y-2">
+                    <h2 class="text-2xl sm:text-3xl font-extrabold text-slate-900">आमच्या प्रमुख सेवा प्रकार</h2>
+                    <p class="text-slate-600 text-sm sm:text-base max-w-xl mx-auto">आपल्या विविध शासकीय व डिजिटल कामांसाठी आवश्यक सेवा एकाच छताखाली.</p>
+                </div>
+
+                <div id="featured-services-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                    <!-- Dynamic Featured Service Cards Injected via JS -->
+                </div>
+
+                <div class="text-center pt-4">
+                    <button onclick="navigateTo('services')" class="inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-saffron-600 hover:bg-saffron-700 text-white font-bold transition shadow-md">
+                        <span>सर्व सेवा पहा (All Services)</span>
+                        <i data-lucide="arrow-right" class="w-4 h-4"></i>
+                    </button>
+                </div>
+            </section>
+
+            <!-- Workflow / How it works Section -->
+            <section class="bg-slate-100 py-16 mt-12">
+                <div class="max-w-7xl mx-auto px-4 space-y-10">
+                    <div class="text-center space-y-2">
+                        <span class="text-saffron-700 font-bold text-sm tracking-wider uppercase">सोपी आणि पारदर्शक कार्यपद्धती</span>
+                        <h2 class="text-2xl sm:text-3xl font-extrabold text-slate-900">सेवा मिळवण्याची प्रक्रिया (How It Works)</h2>
+                    </div>
+
+                    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                        <div class="bg-white p-6 rounded-2xl shadow-sm border border-slate-200/80 text-center space-y-3 relative">
+                            <div class="w-12 h-12 rounded-full bg-saffron-600 text-white font-black text-xl flex items-center justify-center mx-auto shadow-md">१</div>
+                            <h3 class="font-extrabold text-slate-800 text-lg">सेवा निवडा</h3>
+                            <p class="text-sm text-slate-600">आपल्याला आवश्यक असलेल्या शासकीय किंवा डिजिटल सेवेची माहिती पहा.</p>
+                        </div>
+
+                        <div class="bg-white p-6 rounded-2xl shadow-sm border border-slate-200/80 text-center space-y-3 relative">
+                            <div class="w-12 h-12 rounded-full bg-saffron-600 text-white font-black text-xl flex items-center justify-center mx-auto shadow-md">२</div>
+                            <h3 class="font-extrabold text-slate-800 text-lg">आमच्याशी संपर्क करा</h3>
+                            <p class="text-sm text-slate-600">WhatsApp किंवा कॉल करून आवश्यक कागदपत्रांची खात्री करा.</p>
+                        </div>
+
+                        <div class="bg-white p-6 rounded-2xl shadow-sm border border-slate-200/80 text-center space-y-3 relative">
+                            <div class="w-12 h-12 rounded-full bg-saffron-600 text-white font-black text-xl flex items-center justify-center mx-auto shadow-md">३</div>
+                            <h3 class="font-extrabold text-slate-800 text-lg">कागदपत्रे जमा करा</h3>
+                            <p class="text-sm text-slate-600">केंद्रात येऊन किंवा WhatsApp वर आवश्यक मूळ व छायांकित कागदपत्रे द्या.</p>
+                        </div>
+
+                        <div class="bg-white p-6 rounded-2xl shadow-sm border border-slate-200/80 text-center space-y-3 relative">
+                            <div class="w-12 h-12 rounded-full bg-saffron-600 text-white font-black text-xl flex items-center justify-center mx-auto shadow-md">४</div>
+                            <h3 class="font-extrabold text-slate-800 text-lg">काम पूर्ण</h3>
+                            <p class="text-sm text-slate-600">अर्जाची प्रक्रिया पूर्ण झाल्यावर आपला दाखला किंवा दस्तऐवज मिळवा.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <!-- ================= PAGE 2: SERVICES PAGE ================= -->
+        <div id="view-services" class="view-page">
+            <section class="max-w-7xl mx-auto px-4 py-8 space-y-6">
+                <!-- Page Title -->
+                <div class="bg-gradient-to-r from-saffron-700 to-maroon-800 rounded-2xl p-6 sm:p-8 text-white space-y-2 shadow-lg">
+                    <h1 class="text-2xl sm:text-4xl font-extrabold">आमच्या सर्व सेवा (Services Catalog)</h1>
+                    <p class="text-slate-200 text-sm sm:text-base">शासकीय प्रमाणपत्रे, ओळखपत्रे, CSC, प्रिंटिंग व डिजिटल सेवांची संपूर्ण यादी.</p>
+                </div>
+
+                <!-- Filter Pills and Search Bar -->
+                <div class="space-y-4 bg-white p-4 sm:p-6 rounded-2xl border border-slate-200 shadow-sm">
+                    <!-- Text Search -->
+                    <div class="relative">
+                        <i data-lucide="search" class="w-5 h-5 text-slate-400 absolute left-4 top-1/2 -translate-y-1/2"></i>
+                        <input type="text" id="service-search-input" oninput="filterServices()" placeholder="आपल्याला कोणती सेवा हवी आहे? (उदा. उत्पन्न, जात, PAN, राजपत्र, झेरॉक्स)..." class="w-full pl-12 pr-4 py-3 rounded-xl border border-slate-300 focus:outline-none focus:ring-2 focus:ring-saffron-500 text-slate-800">
+                    </div>
+
+                    <!-- Category Filter Buttons -->
+                    <div class="flex flex-wrap gap-2 pt-2" id="category-filters">
+                        <button onclick="setCategoryFilter('all')" class="cat-filter-btn active px-4 py-2 rounded-lg text-sm font-bold bg-saffron-600 text-white shadow-sm transition" data-cat="all">सर्व (All)</button>
+                        <button onclick="setCategoryFilter('government')" class="cat-filter-btn px-4 py-2 rounded-lg text-sm font-bold bg-slate-100 text-slate-700 hover:bg-slate-200 transition" data-cat="government">शासकीय प्रमाणपत्रे</button>
+                        <button onclick="setCategoryFilter('identity')" class="cat-filter-btn px-4 py-2 rounded-lg text-sm font-bold bg-slate-100 text-slate-700 hover:bg-slate-200 transition" data-cat="identity">ओळखपत्र व PAN/मतदार</button>
+                        <button onclick="setCategoryFilter('csc')" class="cat-filter-btn px-4 py-2 rounded-lg text-sm font-bold bg-slate-100 text-slate-700 hover:bg-slate-200 transition" data-cat="csc">CSC व निवडणूक</button>
+                        <button onclick="setCategoryFilter('printing')" class="cat-filter-btn px-4 py-2 rounded-lg text-sm font-bold bg-slate-100 text-slate-700 hover:bg-slate-200 transition" data-cat="printing">प्रिंटिंग व झेरॉक्स</button>
+                        <button onclick="setCategoryFilter('financial')" class="cat-filter-btn px-4 py-2 rounded-lg text-sm font-bold bg-slate-100 text-slate-700 hover:bg-slate-200 transition" data-cat="financial">आर्थिक व डिजिटल</button>
+                    </div>
+                </div>
+
+                <!-- Services Grid Container -->
+                <div id="all-services-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 pt-4">
+                    <!-- Services loaded via services.js array dynamically -->
+                </div>
+
+                <!-- Empty State Message -->
+                <div id="no-services-found" class="hidden text-center py-12 space-y-3 bg-white rounded-2xl border border-dashed border-slate-300">
+                    <i data-lucide="file-x" class="w-12 h-12 text-slate-400 mx-auto"></i>
+                    <h3 class="text-lg font-bold text-slate-700">कोणतीही सेवा सापडली नाही</h3>
+                    <p class="text-sm text-slate-500">कृपया वेगळा शब्द शोधून पहा किंवा खालील बटणावर दाबून थेट WhatsApp वर विचारा.</p>
+                    <a id="search-fallback-wa" href="#" target="_blank" class="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-emerald-600 text-white font-bold text-sm">
+                        <i data-lucide="message-circle" class="w-4 h-4"></i> WhatsApp वर थेट विचारा
+                    </a>
+                </div>
+            </section>
+        </div>
+
+        <!-- ================= PAGE 3: REQUIRED DOCUMENTS PAGE ================= -->
+        <div id="view-documents" class="view-page">
+            <section class="max-w-7xl mx-auto px-4 py-8 space-y-6">
+                <div class="bg-gradient-to-r from-slate-900 to-saffron-900 rounded-2xl p-6 sm:p-8 text-white space-y-2 shadow-lg">
+                    <h1 class="text-2xl sm:text-4xl font-extrabold">आवश्यक कागदपत्रे (Required Documents)</h1>
+                    <p class="text-slate-300 text-sm sm:text-base">शासकीय दाखल्यांसाठी साधारणपणे लागणाऱ्या कागदपत्रांची सूची.</p>
+                </div>
+
+                <div class="p-4 rounded-xl bg-amber-50 border border-amber-200 text-amber-900 text-xs sm:text-sm flex items-start gap-3">
+                    <i data-lucide="alert-triangle" class="w-5 h-5 text-amber-600 shrink-0 mt-0.5"></i>
+                    <div>
+                        <strong>महत्त्वाची टीप:</strong> आवश्यक कागदपत्रे सेवेच्या स्वरुपावर आणि शासकीय नियमांनुसार बदलू शकतात. अर्ज करण्यापूर्वी कृपया आमच्याशी केंद्रात किंवा WhatsApp द्वारे संपर्क साधून खात्री करा.
+                    </div>
+                </div>
+
+                <!-- Expandable Document Cards -->
+                <div class="space-y-4" id="documents-accordion-container">
+                    <!-- Dynamic Document Checklists Rendered via JavaScript -->
+                </div>
+            </section>
+        </div>
+
+        <!-- ================= PAGE 4: ABOUT US PAGE ================= -->
+        <div id="view-about" class="view-page">
+            <section class="max-w-5xl mx-auto px-4 py-8 space-y-8">
+                <div class="text-center space-y-3">
+                    <span class="px-3 py-1 rounded-full bg-saffron-100 text-saffron-800 text-xs font-bold">आपले स्थानिक डिजिटल केंद्र</span>
+                    <h1 class="text-3xl sm:text-4xl font-extrabold text-slate-900">मोरया मल्टीसर्व्हिसेस बद्दल (About Us)</h1>
+                    <p class="text-slate-600 text-sm sm:text-base">सुभेदार कॉम्प्लेक्स, मुखेड (नांदेड) येथील डिजिटल सहाय्य केंद्र.</p>
+                </div>
+
+                <div class="bg-white p-6 sm:p-8 rounded-2xl border border-slate-200 shadow-sm space-y-6 text-slate-700 leading-relaxed text-base">
+                    <p>
+                        <strong>मोरया मल्टीसर्व्हिसेस</strong> हे मुखेड आणि परिसरातील नागरिकांसाठी विविध शासकीय दाखले, CSC सेवा, ऑनलाइन अर्ज, डिजिटल सहाय्य, प्रिंटिंग आणि झेरॉक्स यांसारख्या सेवा पुरवणारे एक विश्वासार्ह केंद्र आहे.
+                    </p>
+                    <p>
+                        विविध शासकीय योजना व दाखल्यांच्या प्रक्रियेत सामान्य नागरिकांना अचूक माहिती मिळावी आणि त्यांचा वेळ बचावा, या उद्देशाने आम्ही सुलभ व जलद सेवा देण्याचा प्रयत्न करतो.
+                    </p>
+
+                    <div class="pt-4 border-t border-slate-100 grid grid-cols-1 sm:grid-cols-2 gap-4">
+                        <div class="p-4 rounded-xl bg-slate-50 border border-slate-200/80 space-y-2">
+                            <h3 class="font-bold text-slate-800 flex items-center gap-2">
+                                <i data-lucide="check-circle-2" class="w-5 h-5 text-saffron-600"></i> एकाच ठिकाणी सर्व सोयी
+                            </h3>
+                            <p class="text-xs text-slate-600">उत्पन्न, जात, PAN, मतदार कार्ड, झेरॉक्स व प्रिंटिंग कामे एकाच छताखाली.</p>
+                        </div>
+                        <div class="p-4 rounded-xl bg-slate-50 border border-slate-200/80 space-y-2">
+                            <h3 class="font-bold text-slate-800 flex items-center gap-2">
+                                <i data-lucide="heart-handshake" class="w-5 h-5 text-saffron-600"></i> नम्र व तत्पर सेवा
+                            </h3>
+                            <p class="text-xs text-slate-600">ग्रामीण व शहरी भागातील ग्राहकांना समजेल अशा सोप्या भाषेत मदत व मार्गदर्शक.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Why Choose Us -->
+                <div class="space-y-4">
+                    <h2 class="text-2xl font-bold text-slate-800 text-center">आम्हालाच का निवडावे?</h2>
+                    <div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
+                        <div class="bg-white p-5 rounded-xl border border-slate-200 text-center space-y-2">
+                            <i data-lucide="shield-check" class="w-8 h-8 text-saffron-600 mx-auto"></i>
+                            <h3 class="font-bold text-slate-800">अचूक अर्ज भरणी</h3>
+                            <p class="text-xs text-slate-500">फॉर्म भरताना होणाऱ्या चुका टाळण्यासाठी अनुभवी व्यक्तींकडून सहाय्य.</p>
+                        </div>
+                        <div class="bg-white p-5 rounded-xl border border-slate-200 text-center space-y-2">
+                            <i data-lucide="clock-4" class="w-8 h-8 text-saffron-600 mx-auto"></i>
+                            <h3 class="font-bold text-slate-800">वेळेची बचत</h3>
+                            <p class="text-xs text-slate-500">ऑनलाइन प्रक्रियेद्वारे आपले काम वेळेवर पूर्ण होण्यास मदत.</p>
+                        </div>
+                        <div class="bg-white p-5 rounded-xl border border-slate-200 text-center space-y-2">
+                            <i data-lucide="map-pin" class="w-8 h-8 text-saffron-600 mx-auto"></i>
+                            <h3 class="font-bold text-slate-800">मध्यवर्ती ठिकाण</h3>
+                            <p class="text-xs text-slate-500">मुखेड येथील आंबेडकर पुतळ्याजवळ, सुभेदार कॉम्प्लेक्समध्ये सहजरित्या भेट द्या.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <!-- ================= PAGE 5: FAQ PAGE ================= -->
+        <div id="view-faq" class="view-page">
+            <section class="max-w-4xl mx-auto px-4 py-8 space-y-6">
+                <div class="text-center space-y-2">
+                    <h1 class="text-3xl font-extrabold text-slate-900">वारंवार विचारले जाणारे प्रश्न (FAQ)</h1>
+                    <p class="text-slate-600 text-sm">आमच्या सेवांबाबत ग्राहकांच्या सामान्य शंका आणि त्यांची उत्तरे.</p>
+                </div>
+
+                <div class="space-y-3" id="faq-accordion-container">
+                    <!-- Dynamic FAQs injected via JS -->
+                </div>
+            </section>
+        </div>
+
+        <!-- ================= PAGE 6: CONTACT & LOCATION PAGE ================= -->
+        <div id="view-contact" class="view-page">
+            <section class="max-w-7xl mx-auto px-4 py-8 space-y-8">
+                <div class="text-center space-y-2">
+                    <h1 class="text-3xl font-extrabold text-slate-900">आजच आमच्याशी संपर्क करा</h1>
+                    <p class="text-slate-600 text-sm">आम्हाला प्रत्यक्ष भेट द्या, कॉल करा किंवा WhatsApp वर संदेश पाठवा.</p>
+                </div>
+
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+                    <!-- Contact Cards -->
+                    <div class="bg-white p-6 sm:p-8 rounded-2xl border border-slate-200 shadow-sm space-y-6">
+                        <div class="space-y-4">
+                            <div class="flex items-start gap-4">
+                                <div class="w-12 h-12 rounded-xl bg-saffron-100 text-saffron-700 flex items-center justify-center shrink-0">
+                                    <i data-lucide="map-pin" class="w-6 h-6"></i>
+                                </div>
+                                <div>
+                                    <h3 class="font-bold text-slate-800 text-lg">केंद्राचा पत्ता</h3>
+                                    <p id="contact-address-text" class="text-sm text-slate-600 mt-1 leading-relaxed">
+                                        सुभेदार कॉम्प्लेक्स, डॉ. बी. आर. आंबेडकर पुतळ्याजवळ, मुखेड - ४३१७१५, जिल्हा नांदेड, महाराष्ट्र.
+                                    </p>
+                                </div>
+                            </div>
+
+                            <div class="flex items-start gap-4">
+                                <div class="w-12 h-12 rounded-xl bg-emerald-100 text-emerald-700 flex items-center justify-center shrink-0">
+                                    <i data-lucide="phone" class="w-6 h-6"></i>
+                                </div>
+                                <div>
+                                    <h3 class="font-bold text-slate-800 text-lg">फोन व WhatsApp</h3>
+                                    <p class="text-sm text-slate-600 mt-1">
+                                        फोन: <span id="contact-phone-display" class="font-semibold text-slate-800"></span><br>
+                                        WhatsApp: <span id="contact-wa-display" class="font-semibold text-slate-800"></span>
+                                    </p>
+                                </div>
+                            </div>
+
+                            <div class="flex items-start gap-4">
+                                <div class="w-12 h-12 rounded-xl bg-blue-100 text-blue-700 flex items-center justify-center shrink-0">
+                                    <i data-lucide="clock" class="w-6 h-6"></i>
+                                </div>
+                                <div>
+                                    <h3 class="font-bold text-slate-800 text-lg">वेळ व दिवस</h3>
+                                    <p class="text-sm text-slate-600 mt-1">
+                                        सोमवार ते शनिवार: सकाळी ९:०० ते सायं. ८:००<br>
+                                        रविवार: दुपारी १:०० वाजेपर्यंत चालू
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Contact Action Buttons -->
+                        <div class="pt-4 border-t border-slate-100 space-y-3">
+                            <a id="contact-page-wa-btn" href="#" target="_blank" class="w-full py-3.5 rounded-xl bg-emerald-600 text-white font-bold flex items-center justify-center gap-2 shadow-md hover:bg-emerald-700 transition">
+                                <i data-lucide="message-circle" class="w-5 h-5"></i>
+                                <span>WhatsApp वर थेट संपर्क करा</span>
+                            </a>
+                            <a id="contact-page-call-btn" href="#" class="w-full py-3.5 rounded-xl bg-saffron-600 text-white font-bold flex items-center justify-center gap-2 shadow-md hover:bg-saffron-700 transition">
+                                <i data-lucide="phone-call" class="w-5 h-5"></i>
+                                <span>फोन वर कॉल करा</span>
+                            </a>
+                            <a id="contact-page-maps-btn" href="#" target="_blank" class="w-full py-3.5 rounded-xl bg-slate-800 text-white font-bold flex items-center justify-center gap-2 shadow-md hover:bg-slate-900 transition">
+                                <i data-lucide="navigation" class="w-5 h-5 text-gold-400"></i>
+                                <span>Google Maps वर मार्ग पहा</span>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Map Preview / Directions Placeholder -->
+                    <div class="bg-white p-4 rounded-2xl border border-slate-200 shadow-sm flex flex-col h-full min-h-[380px]">
+                        <h3 class="font-bold text-slate-800 mb-3 flex items-center gap-2">
+                            <i data-lucide="map" class="w-5 h-5 text-saffron-600"></i> गूगल मॅप लोकेशन (Google Maps)
+                        </h3>
+                        <div class="w-full flex-grow rounded-xl bg-slate-100 overflow-hidden relative border border-slate-200 flex flex-col items-center justify-center text-center p-6 space-y-4">
+                            <div class="w-16 h-16 rounded-full bg-saffron-100 text-saffron-600 flex items-center justify-center animate-bounce">
+                                <i data-lucide="map-pin" class="w-8 h-8"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-extrabold text-slate-800">मोरया मल्टीसर्व्हिसेस, मुखेड</h4>
+                                <p class="text-xs text-slate-500 mt-1">सुभेदार कॉम्प्लेक्स, आंबेडकर पुतळ्याजवळ</p>
+                            </div>
+                            <a id="contact-map-iframe-btn" href="#" target="_blank" class="px-5 py-2.5 bg-saffron-600 hover:bg-saffron-700 text-white rounded-xl font-bold text-xs shadow-md transition">
+                                गूगल मॅप्स वर नकाशा उघडा
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <!-- ================= PAGE 7: LEGAL & PRIVACY PAGE ================= -->
+        <div id="view-legal" class="view-page">
+            <section class="max-w-4xl mx-auto px-4 py-8 space-y-6">
+                <h1 class="text-3xl font-extrabold text-slate-900">गोपनीयता धोरण व अटी (Terms & Privacy)</h1>
+                <div class="bg-white p-6 rounded-2xl border border-slate-200 space-y-4 text-slate-700 text-sm leading-relaxed">
+                    <h2 class="font-bold text-slate-900 text-base">१. शासकीय मान्यता व वैधानिक स्पष्टीकरण (Disclaimer)</h2>
+                    <p>
+                        मौर्य मल्टीसर्व्हिसेस / मोरया मल्टीसर्व्हिसेस हे एक खाजगी डिजिटल सेवा व CSC सहाय्य केंद्र आहे. हे कोणतेही अधिकृत शासकीय मंत्रालय किंवा शासकीय संकेतस्थळ नाही. आम्ही केवळ ग्राहकांना ऑनलाइन अर्ज भरण्यास, दस्तऐवज डिजिटल स्वरुपात तयार करण्यास आणि शासकीय पोर्टलवर प्रक्रिया करण्यास तांत्रिक सहाय्य करतो.
+                    </p>
+                    <h2 class="font-bold text-slate-900 text-base">२. शुल्क व सेवा आकार</h2>
+                    <p>
+                        शासकीय शुल्काव्यतिरिक्त केंद्रामध्ये अर्ज भरण्यासाठी आणि संगणकीय प्रक्रियेसाठी लागणारा वाजवी सेवा आकार (Service Charges) घेतला जातो.
+                    </p>
+                    <h2 class="font-bold text-slate-900 text-base">३. माहितीची गोपनीयता</h2>
+                    <p>
+                        ग्राहकांकडून प्राप्त झालेली आधार कार्ड, फोटो किंवा इतर माहिती ही केवळ त्यांच्या संबंधित अर्जाच्या प्रक्रियेसाठीच वापरली जाते.
+                    </p>
+                </div>
+            </section>
+        </div>
+
+    </main>
+
+    <div id="service-modal" class="fixed inset-0 z-50 hidden bg-slate-900/60 backdrop-blur-sm flex items-center justify-center p-4 animate-fade-in">
+        <div class="bg-white w-full max-w-xl rounded-3xl shadow-2xl border border-slate-100 overflow-hidden flex flex-col max-h-[90vh]">
+            <!-- Modal Header -->
+            <div class="bg-slate-900 text-white p-5 flex items-center justify-between border-b border-slate-800">
+                <div class="flex items-center gap-3">
+                    <div id="modal-icon-bg" class="w-10 h-10 rounded-xl bg-saffron-600 text-white flex items-center justify-center font-bold">
+                        <i id="modal-icon" data-lucide="file-text" class="w-5 h-5"></i>
+                    </div>
+                    <div>
+                        <h3 id="modal-title" class="font-bold text-lg text-white">सेवा शीर्षक</h3>
+                        <p id="modal-english-title" class="text-xs text-saffron-400">English Name</p>
+                    </div>
+                </div>
+                <button onclick="closeServiceModal()" class="p-2 rounded-full hover:bg-slate-800 text-slate-400 hover:text-white transition">
+                    <i data-lucide="x" class="w-5 h-5"></i>
+                </button>
+            </div>
+
+            <!-- Modal Content Body -->
+            <div class="p-6 overflow-y-auto space-y-5 text-sm text-slate-700">
+                <!-- Description -->
+                <div>
+                    <h4 class="font-bold text-slate-900 mb-1 flex items-center gap-1.5 text-xs uppercase tracking-wider text-saffron-700">
+                        <i data-lucide="info" class="w-4 h-4"></i> सेवेबाबत माहिती (About Service)
+                    </h4>
+                    <p id="modal-description" class="text-slate-600 leading-relaxed bg-slate-50 p-3 rounded-xl border border-slate-100">
+                        सेवेची सविस्तर माहिती येथे दिसेल.
+                    </p>
+                </div>
+
+                <!-- Documents List -->
+                <div>
+                    <h4 class="font-bold text-slate-900 mb-2 flex items-center gap-1.5 text-xs uppercase tracking-wider text-saffron-700">
+                        <i data-lucide="file-check" class="w-4 h-4"></i> आवश्यक कागदपत्रे (Required Documents)
+                    </h4>
+                    <ul id="modal-documents-list" class="space-y-1.5 pl-2">
+                        <!-- Items dynamically generated -->
+                    </ul>
+                </div>
+
+                <!-- Timeline and Fee Note -->
+                <div class="grid grid-cols-2 gap-3 pt-2">
+                    <div class="p-3 rounded-xl bg-slate-50 border border-slate-200/80 space-y-1">
+                        <span class="text-xs font-semibold text-slate-500 block">अंदाजे कालावधी:</span>
+                        <span id="modal-timeline" class="font-bold text-slate-800 text-xs sm:text-sm">शासकीय नियमांनुसार</span>
+                    </div>
+                    <div class="p-3 rounded-xl bg-slate-50 border border-slate-200/80 space-y-1">
+                        <span class="text-xs font-semibold text-slate-500 block">सेवा शुल्क:</span>
+                        <span class="font-bold text-saffron-700 text-xs sm:text-sm">माहितीसाठी संपर्क करा</span>
+                    </div>
+                </div>
+
+                <!-- Disclaimer -->
+                <p class="text-[11px] text-slate-400 italic">
+                    * आवश्यक कागदपत्रे व प्रक्रियेतील वेळ अर्जाच्या प्रकारानुसार बदलू शकतो.
+                </p>
+            </div>
+
+            <!-- Modal Action Buttons -->
+            <div class="p-4 bg-slate-50 border-t border-slate-100 grid grid-cols-2 gap-3">
+                <a id="modal-wa-action" href="#" target="_blank" class="py-3 px-4 rounded-xl bg-emerald-600 hover:bg-emerald-700 text-white font-bold text-xs sm:text-sm flex items-center justify-center gap-1.5 shadow-sm transition">
+                    <i data-lucide="message-circle" class="w-4 h-4"></i> WhatsApp चौकशी
+                </a>
+                <a id="modal-call-action" href="#" class="py-3 px-4 rounded-xl bg-saffron-600 hover:bg-saffron-700 text-white font-bold text-xs sm:text-sm flex items-center justify-center gap-1.5 shadow-sm transition">
+                    <i data-lucide="phone" class="w-4 h-4"></i> थेट कॉल करा
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <div class="lg:hidden fixed bottom-0 left-0 right-0 z-40 bg-white/95 backdrop-blur-md border-t border-slate-200 px-2 py-2 shadow-2xl">
+        <div class="grid grid-cols-4 gap-1">
+            <a id="mobile-bottom-call" href="#" class="flex flex-col items-center justify-center py-1.5 rounded-xl text-slate-700 hover:text-saffron-600 active:bg-slate-100">
+                <i data-lucide="phone" class="w-5 h-5 text-saffron-600"></i>
+                <span class="text-[10px] font-bold mt-1">कॉल</span>
+            </a>
+            <a id="mobile-bottom-wa" href="#" target="_blank" class="flex flex-col items-center justify-center py-1.5 rounded-xl text-slate-700 hover:text-emerald-600 active:bg-slate-100">
+                <i data-lucide="message-circle" class="w-5 h-5 text-emerald-600"></i>
+                <span class="text-[10px] font-bold mt-1">WhatsApp</span>
+            </a>
+            <a id="mobile-bottom-maps" href="#" target="_blank" class="flex flex-col items-center justify-center py-1.5 rounded-xl text-slate-700 hover:text-blue-600 active:bg-slate-100">
+                <i data-lucide="map-pin" class="w-5 h-5 text-blue-600"></i>
+                <span class="text-[10px] font-bold mt-1">मार्ग</span>
+            </a>
+            <button onclick="navigateTo('services')" class="flex flex-col items-center justify-center py-1.5 rounded-xl text-slate-700 hover:text-saffron-600 active:bg-slate-100">
+                <i data-lucide="grid" class="w-5 h-5 text-purple-600"></i>
+                <span class="text-[10px] font-bold mt-1">सेवा</span>
+            </button>
+        </div>
+    </div>
+
+    <footer class="bg-slate-900 text-slate-300 pt-12 pb-24 lg:pb-12 border-t border-slate-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-10">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <!-- Brand Info -->
+                <div class="space-y-3 md:col-span-1">
+                    <div class="flex items-center gap-2">
+                        <span class="text-xl font-black text-white">मोरया</span>
+                        <span class="text-xl font-black text-saffron-500">मल्टीसर्व्हिसेस</span>
+                    </div>
+                    <p class="text-xs text-slate-400 leading-relaxed">
+                        महाराष्ट्र शासनाच्या विविध शासकीय दाखल्यांचे ऑनलाइन अर्ज व सर्व प्रकारच्या डिजिटल सेवांसाठी आपले विश्वासू केंद्र.
+                    </p>
+                    <p class="text-xs font-semibold text-gold-400">
+                        ॥ सुभेदार कॉम्प्लेक्स, मुखेड ॥
+                    </p>
+                </div>
+
+                <!-- Quick Links -->
+                <div class="space-y-2">
+                    <h4 class="font-bold text-white text-sm">क्विक लिंक्स (Quick Links)</h4>
+                    <ul class="space-y-1.5 text-xs text-slate-400">
+                        <li><a href="#" onclick="navigateTo('home'); return false;" class="hover:text-saffron-400 transition">मुख्यपृष्ठ</a></li>
+                        <li><a href="#" onclick="navigateTo('services'); return false;" class="hover:text-saffron-400 transition">आमच्या सर्व सेवा</a></li>
+                        <li><a href="#" onclick="navigateTo('documents'); return false;" class="hover:text-saffron-400 transition">आवश्यक कागदपत्रे</a></li>
+                        <li><a href="#" onclick="navigateTo('about'); return false;" class="hover:text-saffron-400 transition">आमच्याबद्दल</a></li>
+                        <li><a href="#" onclick="navigateTo('faq'); return false;" class="hover:text-saffron-400 transition">प्रश्नोत्तरे (FAQ)</a></li>
+                    </ul>
+                </div>
+
+                <!-- Top Services -->
+                <div class="space-y-2">
+                    <h4 class="font-bold text-white text-sm">प्रमुख सेवा</h4>
+                    <ul class="space-y-1.5 text-xs text-slate-400">
+                        <li>उत्पन्न प्रमाणपत्र (Income Cert)</li>
+                        <li>जात व जात वैधता दाखला</li>
+                        <li>PAN कार्ड व मतदार ओळखपत्र</li>
+                        <li>राजपत्र (Gazette Services)</li>
+                        <li>झटपट झेरॉक्स व कलर प्रिंट</li>
+                    </ul>
+                </div>
+
+                <!-- Address & Contact -->
+                <div class="space-y-2">
+                    <h4 class="font-bold text-white text-sm">संपर्क पत्ता</h4>
+                    <p class="text-xs text-slate-400 leading-relaxed" id="footer-address">
+                        सुभेदार कॉम्प्लेक्स, डॉ. बी. आर. आंबेडकर पुतळ्याजवळ, मुखेड - ४३१७१५, जि. नांदेड.
+                    </p>
+                    <div class="pt-2 text-xs text-slate-300">
+                        फोन: <span id="footer-phone" class="font-medium text-white"></span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Important Disclaimer Box -->
+            <div class="p-4 rounded-xl bg-slate-800/80 border border-slate-700/60 text-[11px] text-slate-400 leading-relaxed space-y-1">
+                <span class="font-bold text-amber-400 block">सूचना व वैधानिक स्पष्टीकरण (Disclaimer):</span>
+                <p>
+                    मोरया मल्टीसर्व्हिसेस (Morya Multiservices) हे नागरिकांना विविध ऑनलाइन, डिजिटल व शासकीय सेवांसाठी तांत्रिक सहाय्य करणारे खाजगी सेवा केंद्र आहे. हे संकेतस्थळ कोणत्याही शासकीय विभागाचे अधिकृत संकेतस्थळ नाही. शासकीय सेवा, नियम, शुल्क व आवश्यक कागदपत्रांमध्ये संबंधित प्राधिकरणाच्या धोरणानुसार बदल होऊ शकतात.
+                </p>
+            </div>
+
+            <!-- Bottom Copyright -->
+            <div class="pt-6 border-t border-slate-800 flex flex-col sm:flex-row justify-between items-center text-xs text-slate-500 gap-3">
+                <p>© 2026 मोरया मल्टीसर्व्हिसेस (Morya Multiservices). सर्व हक्क राखीव.</p>
+                <div class="flex items-center space-x-4">
+                    <a href="#" onclick="navigateTo('legal'); return false;" class="hover:text-slate-300">गोपनीयता धोरण व अटी</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        /* ==========================================================================
+           1. CENTRAL CONFIGURATION (config.js equivalent)
+           ========================================================================== */
+        const BUSINESS_CONFIG = {
+            name: "मोरया मल्टीसर्व्हिसेस",
+            englishName: "Morya Multiservices",
+            subtitle: "CSC & डिजिटल सेवा केंद्र",
+            phone: "+917798199434",
+            whatsapp: "917798199434",
+            email: "moryanet1@gmail.com",
+            address: "सुभेदार कॉम्प्लेक्स, डॉ. बी. आर. आंबेडकर पुतळ्याजवळ, मुखेड - ४३१७१५, जिल्हा नांदेड, महाराष्ट्र",
+            mapsUrl: "https://www.google.com/maps/search/?api=1&query=Morya+Multiservices+Subhedar+Complex+Mukhed+431715"
+        };
+
+        /* ==========================================================================
+           2. SERVICES CENTRAL DATA ARRAY (services.js equivalent)
+           ========================================================================== */
+        const servicesData = [
+            {
+                id: "income-certificate",
+                name: "उत्पन्न प्रमाणपत्र",
+                englishName: "Income Certificate",
+                category: "government",
+                icon: "file-text",
+                featured: true,
+                description: "३ वर्षाचे किंवा १ वर्षाचे उत्पन्न प्रमाणपत्रासाठी ऑनलाइन अर्ज व आवश्यक कागदपत्रांच्या प्रक्रियेसाठी संपूर्ण सहाय्य.",
+                timeline: "३ ते ७ कार्यदिवस",
+                documents: [
+                    "आधार कार्ड (Aadhaar Card)",
+                    "रहिवासी दाखला / राशन कार्ड छायाप्रत",
+                    "स्वयंघोषणा पत्र / तलाठी उत्पन्न दाखला",
+                    "पासपोर्ट साईज फोटो",
+                    "सक्रिय मोबाईल नंबर"
+                ]
+            },
+            {
+                id: "caste-certificate",
+                name: "जात प्रमाणपत्र",
+                englishName: "Caste Certificate",
+                category: "government",
+                icon: "award",
+                featured: true,
+                description: "SC, ST, OBC, VJNT, SBC प्रवर्गातील उमेदवारांसाठी जात दाखला अर्जाची अचूक ऑनलाइन प्रक्रिया.",
+                timeline: "१५ ते २१ कार्यदिवस",
+                documents: [
+                    "अर्जदाराचे आधार कार्ड व शाळा सोडल्याचा दाखला (TC)",
+                    "वडिलांचा / आजोबांचा शाळा सोडल्याचा दाखला किंवा प्राथमिक निर्गम",
+                    "१९५० / १९६१ चा जुना महसुली / वांशिक पुरावा",
+                    "रेशन कार्ड छायाप्रत व प्रतिज्ञापत्र",
+                    "पासपोर्ट फोटो"
+                ]
+            },
+            {
+                id: "caste-validity",
+                name: "जात वैधता प्रमाणपत्र",
+                englishName: "Caste Validity Certificate",
+                category: "government",
+                icon: "shield-check",
+                featured: true,
+                description: "उच्च शिक्षण (इंजिनिअरिंग, मेडिकल), नोकरी किंवा निवडणुकीसाठी जात वैधता (Caste Validity) प्रस्ताव तयार करणे व सादर करणे.",
+                timeline: "प्रस्ताव पडताळणीनुसार",
+                documents: [
+                    "मूळ जात प्रमाणपत्र (Caste Certificate)",
+                    "अर्जदार व वडिलांचे शाळा सोडल्याचे दाखले",
+                    "वंशावळ प्रतिज्ञापत्र (Affidavit)",
+                    "कॉलेजचे शिफारस पत्र (Form 15/16) / नोकरीचे पत्र"
+                ]
+            },
+            {
+                id: "domicile-certificate",
+                name: "राष्ट्रीयत्व, वय व अधिवास प्रमाणपत्र",
+                englishName: "Age, Nationality & Domicile",
+                category: "government",
+                icon: "globe",
+                featured: true,
+                description: "महाराष्ट्र राज्याचे अधिवास (Domicile) व भारतीय राष्ट्रीयत्वाचा दाखला मिळवण्यासाठी मार्गदर्शन.",
+                timeline: "७ ते १० कार्यदिवस",
+                documents: [
+                    "आधार कार्ड व शाळा सोडल्याचा दाखला",
+                    "महाराष्ट्रात १०-१५ वर्षे वास्तव्याचा पुरावा (लाइट बिल / घरपट्टी)",
+                    "वडिलांचा अधिवास दाखला / टीसी",
+                    "पासपोर्ट फोटो व मोबाईल नंबर"
+                ]
+            },
+            {
+                id: "ews-certificate",
+                name: "EWS प्रमाणपत्र",
+                englishName: "Economically Weaker Section (EWS)",
+                category: "government",
+                icon: "file-check-2",
+                featured: true,
+                description: "खुल्या प्रवर्गातील आर्थिकदृष्ट्या दुर्बल घटकांसाठी १०% आरक्षणाचा लाभ घेण्याकरिता EWS दाखला.",
+                timeline: "७ ते १२ कार्यदिवस",
+                documents: [
+                    "कुटुंबाचा उत्पन्न पुरावा (८ लाखांच्या आत)",
+                    "१९६७ पूर्वीचा महाराष्ट्रातील वास्तव्याचा पुरावा",
+                    "आधार कार्ड, टीसी व रेशन कार्ड",
+                    "जमीन / मालमत्तेचे कागदपत्र (७/१२ उतारा असल्यास)"
+                ]
+            },
+            {
+                id: "gazette-services",
+                name: "राजपत्र (Gazette Services)",
+                englishName: "Name/Religion Change Gazette",
+                category: "government",
+                icon: "book-open",
+                featured: true,
+                description: "नाव बदल, जन्मतारीख दुरुस्ती, किंवा लग्नानंतरचे नाव बदलून मिळण्यासाठी शासकीय राजपत्रात (Gazette) प्रसिद्धी अर्ज.",
+                timeline: "१५ ते ३० दिवस",
+                documents: [
+                    "नाव बदलाचे प्रतिज्ञापत्र (Affidavit)",
+                    "ओळख पुरावा (आधार कार्ड / पॅन कार्ड)",
+                    "शाळा सोडल्याचा दाखला किंवा मॅट्रिक सर्टिफिकेट",
+                    "विवाह नोंदणी दाखला (लग्नानंतर नाव बदलासाठी)"
+                ]
+            },
+            {
+                id: "pan-card",
+                name: "PAN कार्ड सेवा (नवीन / दुरुस्ती)",
+                englishName: "New PAN Card & Correction",
+                category: "identity",
+                icon: "credit-card",
+                featured: true,
+                description: "नवीन PAN कार्ड काढणे, हरवलेले पॅन कार्ड रीप्रिंट करणे किंवा नाव/जन्मतारीख दुरुस्ती अर्ज करणे.",
+                timeline: "ई-पॅन २ दिवसात / फिजिकल पॅन १० दिवसात",
+                documents: [
+                    "आधार कार्ड (सक्रिय मोबाईल लिंक असल्यास उत्तम)",
+                    "२ पासपोर्ट साईज रंगीत फोटो (फिजिकल फॉर्मसाठी)",
+                    "दुरुस्तीसाठी जुने पॅन कार्ड व योग्य पुरावा"
+                ]
+            },
+            {
+                id: "voter-id",
+                name: "मतदार ओळखपत्र (Voter ID)",
+                englishName: "Voter ID Card Services",
+                category: "identity",
+                icon: "user-check",
+                featured: false,
+                description: "नवीन मतदार नोंदणी (Form 6), पत्ता/नाव दुरुस्ती (Form 8) आणि PUC मतदार कार्ड प्रिंटिंग.",
+                timeline: "निवडणूक आयोग प्रक्रियेनुसार",
+                documents: [
+                    "आधार कार्ड",
+                    "वयाचा पुरावा (टीसी / जन्माचा दाखला)",
+                    "रहिवासी पुरावा (लाइट बिल / रेशन कार्ड)",
+                    "पासपोर्ट साईज फोटो"
+                ]
+            },
+            {
+                id: "election-services",
+                name: "निवडणूक संबंधित कामे",
+                englishName: "Election & Voter List Services",
+                category: "csc",
+                icon: "vote",
+                featured: false,
+                description: "मतदार यादीत नाव शोधणे, मतदार ओळखपत्र डाऊनलोड करणे व निवडणूक फॉर्म भरणे.",
+                timeline: "झटपट ऑनलाइन",
+                documents: [
+                    "आधार कार्ड किंवा जुना मतदार ओळखपत्र क्रमांक"
+                ]
+            },
+            {
+                id: "xerox-printing",
+                name: "झेरॉक्स व प्रिंटिंग सुविधा",
+                englishName: "High-Speed Xerox & Color Printing",
+                category: "printing",
+                icon: "printer",
+                featured: true,
+                description: "ब्लॅक अँड व्हाईट झेरॉक्स, कलर प्रिंटिंग, लॅमिनेशन, पासपोर्ट फोटो व स्कॅनिंग सुविधा.",
+                timeline: "झटपट (Instant)",
+                documents: [
+                    "कागदपत्र किंवा पेनड्राइव्ह / व्हॉट्सॲप सॉफ्ट कॉपी"
+                ]
+            },
+            {
+                id: "online-form-filling",
+                name: "सर्व सरकारी व भरती ऑनलाइन फॉर्म",
+                englishName: "Govt Recruitment Form Filling",
+                category: "csc",
+                icon: "laptop-2",
+                featured: false,
+                description: "MPSC, SSC, पोलीस भरती, शिक्षक भरती, स्कॉलरशिप व इतर सर्व शासकीय नोकरीचे ऑनलाइन फॉर्म भरणे.",
+                timeline: "झटपट",
+                documents: [
+                    "शैक्षणिक गुणपत्रके (10th/12th/Graduation)",
+                    "जात/उत्पन्न दाखला (लागू असल्यास)",
+                    "फोटो व स्वाक्षरी स्कॅन"
+                ]
+            },
+            {
+                id: "financial-assistance",
+                name: "आर्थिक व मनी ट्रान्सफर सहाय्य",
+                englishName: "Money Transfer Assistance",
+                category: "financial",
+                icon: "banknote",
+                featured: false,
+                description: "डिजिटल मनी ट्रान्सफर सहाय्य, बँक ट्रान्सफर चौकशी व ऑनलाईन पावती डाउनलोड सुविधा.",
+                timeline: "झटपट",
+                documents: [
+                    "बँक खाते तपशील / UPI क्रमांक"
+                ]
+            }
+        ];
+
+        /* ==========================================================================
+           3. FAQ DATA ARRAY
+           ========================================================================== */
+        const faqData = [
+            {
+                q: "मोरया मल्टीसर्व्हिसेस मध्ये कोणकोणत्या सेवा मिळतात?",
+                a: "आमच्याकडे उत्पन्न प्रमाणपत्र, जात प्रमाणपत्र, जात वैधता, Domicile, EWS दाखला, PAN कार्ड, मतदार ओळखपत्र, राजपत्र (Gazette), ऑनलाइन नोकरी फॉर्म, झेरॉक्स व प्रिंटिंग यांसारख्या सर्व सेवा उपलब्ध आहेत."
+            },
+            {
+                q: "उत्पन्न प्रमाणपत्रासाठी साधारणपणे कोणती कागदपत्रे लागतात?",
+                a: "उत्पन्न दाखल्यासाठी मुख्यत्वे आधार कार्ड, रेशन कार्ड छायाप्रत, स्वयंघोषणा पत्र / तलाठी उत्पन्न दाखला आणि फोटो आवश्यक असतो."
+            },
+            {
+                q: "जातीचा दाखला मिळण्यासाठी किती दिवस लागतात?",
+                a: "शासकीय नियमांनुसार आणि कागदपत्रांच्या पडताळणीनुसार साधारण १५ ते २१ कार्यदिवसांत जात प्रमाणपत्र तयार होते."
+            },
+            {
+                q: "नवीन PAN कार्ड किती दिवसांत मिळते?",
+                a: "ई-पॅन (Digital PAN) २ ते ३ दिवसांत ई-मेलवर उपलब्ध होते, तर फिजिकल प्लास्टिक पॅन कार्ड ७ ते १० दिवसांत पोस्टाने किंवा केंद्रावर मिळते."
+            },
+            {
+                q: "झालेला अर्ज ट्रॅक कसा करायचा?",
+                a: "तुम्ही केंद्रात दिलेल्या पावती क्रमांकावरून (Application ID) किंवा आमच्या WhatsApp क्रमांकावर मेसेज करून अर्जाची सद्यस्थिती विचारू शकता."
+            },
+            {
+                q: "केंद्राचा पत्ता आणि वेळ काय आहे?",
+                a: "आमचे केंद्र सुभेदार कॉम्प्लेक्स, आंबेडकर पुतळ्याजवळ, मुखेड येथे आहे. वेळ: सकाळी ९:०० ते सायं. ८:०० वाजेपर्यंत."
+            }
+        ];
+
+        /* ==========================================================================
+           4. CORE INITIALIZATION & UI BINDING
+           ========================================================================== */
+        window.onload = function() {
+            // Apply Dynamic Business Config across DOM
+            applyConfiguration();
+
+            // Render Featured Services on Home View
+            renderFeaturedServices();
+
+            // Render All Services Catalog
+            renderAllServices(servicesData);
+
+            // Render Document Checklists
+            renderDocumentChecklists();
+
+            // Render FAQ Accordions
+            renderFAQs();
+
+            // Start Dynamic Slideshow
+            initSlideshow();
+
+            // Re-initialize Lucide Icons
+            if (window.lucide) {
+                lucide.createIcons();
+            }
+        };
+
+        function applyConfiguration() {
+            const telUrl = "tel:" + BUSINESS_CONFIG.phone;
+            const waMsg = encodeURIComponent("नमस्कार मोरया मल्टीसर्व्हिसेस, मला ऑनलाइन सेवेबाबत माहिती हवी आहे.");
+            const waUrl = `https://wa.me/${BUSINESS_CONFIG.whatsapp}?text=${waMsg}`;
+
+            // Header Elements
+            document.getElementById("header-phone-btn").href = telUrl;
+            document.getElementById("header-wa-btn").href = waUrl;
+            document.getElementById("drawer-phone-btn").href = telUrl;
+            document.getElementById("drawer-wa-btn").href = waUrl;
+
+            // Hero Buttons
+            document.getElementById("hero-call-btn").href = telUrl;
+            document.getElementById("hero-wa-btn").href = waUrl;
+            document.getElementById("hero-maps-btn").href = BUSINESS_CONFIG.mapsUrl;
+
+            // Search Fallback WA
+            document.getElementById("search-fallback-wa").href = waUrl;
+
+            // Contact Page
+            document.getElementById("contact-phone-display").textContent = BUSINESS_CONFIG.phone;
+            document.getElementById("contact-wa-display").textContent = "+" + BUSINESS_CONFIG.whatsapp;
+            document.getElementById("contact-page-call-btn").href = telUrl;
+            document.getElementById("contact-page-wa-btn").href = waUrl;
+            document.getElementById("contact-page-maps-btn").href = BUSINESS_CONFIG.mapsUrl;
+            document.getElementById("contact-map-iframe-btn").href = BUSINESS_CONFIG.mapsUrl;
+
+            // Footer Elements
+            document.getElementById("footer-phone").textContent = BUSINESS_CONFIG.phone;
+
+            // Mobile Bottom Actions
+            document.getElementById("mobile-bottom-call").href = telUrl;
+            document.getElementById("mobile-bottom-wa").href = waUrl;
+            document.getElementById("mobile-bottom-maps").href = BUSINESS_CONFIG.mapsUrl;
+        }
+
+        function navigateTo(pageId) {
+            // Hide all view pages
+            const pages = document.querySelectorAll('.view-page');
+            pages.forEach(p => p.classList.remove('active'));
+
+            // Show selected view
+            const targetPage = document.getElementById('view-' + pageId);
+            if (targetPage) {
+                targetPage.classList.add('active');
+            }
+
+            // Update Header Nav Active States
+            const navBtns = document.querySelectorAll('.nav-btn');
+            navBtns.forEach(btn => {
+                if (btn.getAttribute('data-target') === pageId) {
+                    btn.classList.add('text-saffron-600', 'bg-saffron-50');
+                } else {
+                    btn.classList.remove('text-saffron-600', 'bg-saffron-50');
+                }
+            });
+
+            // Scroll to top smooth
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+
+        function toggleMobileMenu() {
+            const menu = document.getElementById('mobile-menu');
+            menu.classList.toggle('hidden');
+        }
+
+        function initSlideshow() {
+            const slides = document.querySelectorAll('#hero-slideshow-container .slide');
+            if (!slides || slides.length === 0) return;
+            
+            let currentSlide = 0;
+            setInterval(() => {
+                slides[currentSlide].classList.remove('opacity-100');
+                slides[currentSlide].classList.add('opacity-0');
+                
+                currentSlide = (currentSlide + 1) % slides.length;
+                
+                slides[currentSlide].classList.remove('opacity-0');
+                slides[currentSlide].classList.add('opacity-100');
+            }, 5000);
+        }
+
+        function renderFeaturedServices() {
+            const container = document.getElementById('featured-services-grid');
+            if (!container) return;
+
+            const featured = servicesData.filter(s => s.featured).slice(0, 6);
+            container.innerHTML = featured.map(service => createServiceCardHTML(service)).join('');
+        }
+
+        function renderAllServices(data) {
+            const container = document.getElementById('all-services-grid');
+            const emptyMsg = document.getElementById('no-services-found');
+            if (!container) return;
+
+            if (data.length === 0) {
+                container.innerHTML = '';
+                emptyMsg.classList.remove('hidden');
+            } else {
+                emptyMsg.classList.add('hidden');
+                container.innerHTML = data.map(service => createServiceCardHTML(service)).join('');
+            }
+
+            if (window.lucide) lucide.createIcons();
+        }
+
+        function createServiceCardHTML(service) {
+            const waText = encodeURIComponent(`नमस्कार मोरया मल्टीसर्व्हिसेस, मला "${service.name}" बाबत माहिती हवी आहे. कृपया आवश्यक कागदपत्रे सांगा.`);
+            const waUrl = `https://wa.me/${BUSINESS_CONFIG.whatsapp}?text=${waText}`;
+            const telUrl = `tel:${BUSINESS_CONFIG.phone}`;
+
+            return `
+                <div class="bg-white rounded-2xl p-6 border border-slate-200/90 shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col justify-between group">
+                    <div class="space-y-4">
+                        <div class="flex items-start justify-between">
+                            <div class="w-12 h-12 rounded-xl bg-saffron-50 border border-saffron-100 text-saffron-600 flex items-center justify-center group-hover:scale-110 transition duration-300">
+                                <i data-lucide="${service.icon}" class="w-6 h-6"></i>
+                            </div>
+                            <span class="text-[11px] font-semibold text-slate-500 bg-slate-100 px-2.5 py-1 rounded-full">
+                                ${service.englishName}
+                            </span>
+                        </div>
+
+                        <div>
+                            <h3 class="text-lg font-bold text-slate-800 group-hover:text-saffron-600 transition">${service.name}</h3>
+                            <p class="text-xs text-slate-500 mt-1.5 leading-relaxed line-clamp-2">${service.description}</p>
+                        </div>
+
+                        <div class="pt-2">
+                            <span class="text-xs font-medium text-slate-600 block mb-1">आवश्यक कागदपत्रे:</span>
+                            <div class="flex flex-wrap gap-1">
+                                ${service.documents.slice(0, 2).map(doc => `<span class="text-[10px] bg-slate-100 text-slate-700 px-2 py-0.5 rounded border border-slate-200/60">${doc}</span>`).join('')}
+                                ${service.documents.length > 2 ? `<span class="text-[10px] bg-saffron-50 text-saffron-700 px-1.5 py-0.5 rounded font-bold">+${service.documents.length - 2} इतर</span>` : ''}
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="pt-6 mt-4 border-t border-slate-100 flex items-center gap-2">
+                        <button onclick="openServiceModal('${service.id}')" class="flex-1 py-2.5 rounded-xl bg-slate-100 hover:bg-slate-200 text-slate-800 font-bold text-xs transition flex items-center justify-center gap-1">
+                            <i data-lucide="eye" class="w-3.5 h-3.5"></i> माहिती
+                        </button>
+                        <a href="${waUrl}" target="_blank" class="flex-1 py-2.5 rounded-xl bg-emerald-600 hover:bg-emerald-700 text-white font-bold text-xs transition flex items-center justify-center gap-1 shadow-sm">
+                            <i data-lucide="message-circle" class="w-3.5 h-3.5"></i> WhatsApp
+                        </a>
+                    </div>
+                </div>
+            `;
+        }
+
+        let currentCategory = 'all';
+
+        function setCategoryFilter(category) {
+            currentCategory = category;
+
+            // Update Button Styles
+            const buttons = document.querySelectorAll('.cat-filter-btn');
+            buttons.forEach(btn => {
+                if (btn.getAttribute('data-cat') === category) {
+                    btn.className = "cat-filter-btn active px-4 py-2 rounded-lg text-sm font-bold bg-saffron-600 text-white shadow-sm transition";
+                } else {
+                    btn.className = "cat-filter-btn px-4 py-2 rounded-lg text-sm font-bold bg-slate-100 text-slate-700 hover:bg-slate-200 transition";
+                }
+            });
+
+            filterServices();
+        }
+
+        function filterServices() {
+            const query = document.getElementById('service-search-input').value.trim().toLowerCase();
+
+            const filtered = servicesData.filter(s => {
+                const matchesCategory = currentCategory === 'all' || s.category === currentCategory;
+                const matchesQuery = s.name.toLowerCase().includes(query) ||
+                                     s.englishName.toLowerCase().includes(query) ||
+                                     s.description.toLowerCase().includes(query) ||
+                                     s.documents.some(d => d.toLowerCase().includes(query));
+                return matchesCategory && matchesQuery;
+            });
+
+            renderAllServices(filtered);
+        }
+
+        function handleHomeSearch(val) {
+            navigateTo('services');
+            document.getElementById('service-search-input').value = val;
+            filterServices();
+        }
+
+        function quickFilterSearch(keyword) {
+            navigateTo('services');
+            document.getElementById('service-search-input').value = keyword;
+            filterServices();
+        }
+
+        function openServiceModal(serviceId) {
+            const service = servicesData.find(s => s.id === serviceId);
+            if (!service) return;
+
+            document.getElementById('modal-title').textContent = service.name;
+            document.getElementById('modal-english-title').textContent = service.englishName;
+            document.getElementById('modal-description').textContent = service.description;
+            document.getElementById('modal-timeline').textContent = service.timeline || "शासकीय नियमांनुसार";
+
+            // List documents
+            const docList = document.getElementById('modal-documents-list');
+            docList.innerHTML = service.documents.map(d => `
+                <li class="flex items-center gap-2 text-slate-700 text-xs sm:text-sm">
+                    <i data-lucide="check" class="w-4 h-4 text-emerald-600 shrink-0"></i>
+                    <span>${d}</span>
+                </li>
+            `).join('');
+
+            // Action Buttons
+            const waText = encodeURIComponent(`नमस्कार मोरया मल्टीसर्व्हिसेस, मला "${service.name}" सेवेसाठी अर्ज करायचा आहे. आवश्यक कागदपत्रे व प्रक्रिया सांगा.`);
+            document.getElementById('modal-wa-action').href = `https://wa.me/${BUSINESS_CONFIG.whatsapp}?text=${waText}`;
+            document.getElementById('modal-call-action').href = `tel:${BUSINESS_CONFIG.phone}`;
+
+            // Show Modal
+            const modal = document.getElementById('service-modal');
+            modal.classList.remove('hidden');
+
+            if (window.lucide) lucide.createIcons();
+        }
+
+        function closeServiceModal() {
+            document.getElementById('service-modal').classList.add('hidden');
+        }
+
+        function renderDocumentChecklists() {
+            const container = document.getElementById('documents-accordion-container');
+            if (!container) return;
+
+            const govServices = servicesData.filter(s => s.documents && s.documents.length > 0);
+
+            container.innerHTML = govServices.map((s, index) => `
+                <div class="bg-white rounded-2xl border border-slate-200 overflow-hidden shadow-sm">
+                    <button onclick="toggleAccordion('doc-acc-${index}')" class="w-full p-4 sm:p-5 text-right flex items-center justify-between font-bold text-slate-800 hover:bg-slate-50 transition">
+                        <div class="flex items-center gap-3">
+                            <i data-lucide="${s.icon}" class="w-5 h-5 text-saffron-600"></i>
+                            <span>${s.name} - कागदपत्रे सूची</span>
+                        </div>
+                        <i data-lucide="chevron-down" class="w-5 h-5 text-slate-400 transition-transform duration-200" id="doc-acc-${index}-icon"></i>
+                    </button>
+                    <div id="doc-acc-${index}" class="hidden p-5 pt-0 border-t border-slate-100 bg-slate-50/50 space-y-3">
+                        <p class="text-xs text-slate-500 pt-3">सामान्यता आवश्यक असणारे कागदपत्रे:</p>
+                        <ul class="grid grid-cols-1 sm:grid-cols-2 gap-2">
+                            ${s.documents.map(doc => `
+                                <li class="bg-white p-2.5 rounded-xl border border-slate-200/80 text-xs font-medium text-slate-700 flex items-center gap-2">
+                                    <i data-lucide="file-text" class="w-4 h-4 text-saffron-600 shrink-0"></i>
+                                    <span>${doc}</span>
+                                </li>
+                            `).join('')}
+                        </ul>
+                        <div class="pt-2 text-right">
+                            <a href="https://wa.me/${BUSINESS_CONFIG.whatsapp}?text=${encodeURIComponent('नमस्कार, मला ' + s.name + ' साठी कागदपत्रे तपासायची आहेत.')}" target="_blank" class="inline-flex items-center gap-1 text-xs font-bold text-emerald-700 bg-emerald-50 px-3 py-1.5 rounded-lg hover:bg-emerald-100 transition">
+                                <i data-lucide="message-circle" class="w-3.5 h-3.5"></i> या दाखल्याबाबत WhatsApp वर विचारा
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            `).join('');
+        }
+
+        function renderFAQs() {
+            const container = document.getElementById('faq-accordion-container');
+            if (!container) return;
+
+            container.innerHTML = faqData.map((faq, idx) => `
+                <div class="bg-white rounded-2xl border border-slate-200 overflow-hidden shadow-sm">
+                    <button onclick="toggleAccordion('faq-acc-${idx}')" class="w-full p-4 sm:p-5 text-right flex items-center justify-between font-bold text-slate-800 hover:bg-slate-50 transition text-sm sm:text-base">
+                        <span class="flex items-center gap-2">
+                            <span class="text-saffron-600 font-extrabold">प्र.</span> ${faq.q}
+                        </span>
+                        <i data-lucide="chevron-down" class="w-5 h-5 text-slate-400 shrink-0 transition-transform duration-200" id="faq-acc-${idx}-icon"></i>
+                    </button>
+                    <div id="faq-acc-${idx}" class="hidden p-5 pt-0 border-t border-slate-100 bg-slate-50/50 text-xs sm:text-sm text-slate-600 leading-relaxed">
+                        <p class="pt-3">${faq.a}</p>
+                    </div>
+                </div>
+            `).join('');
+        }
+
+        function toggleAccordion(id) {
+            const el = document.getElementById(id);
+            const icon = document.getElementById(id + '-icon');
+            if (!el) return;
+
+            if (el.classList.contains('hidden')) {
+                el.classList.remove('hidden');
+                if (icon) icon.style.transform = 'rotate(180deg)';
+            } else {
+                el.classList.add('hidden');
+                if (icon) icon.style.transform = 'rotate(0deg)';
+            }
+        }
+    </script>
+</body>
+</html>
